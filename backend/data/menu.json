@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with tomato, mozzarella, and basil",
+    "price": 12.99,
+    "category": "Pizza",
+    "image": "🍕"
+  },
+  {
+    "id": "2",
+    "name": "Caesar Salad",
+    "description": "Fresh romaine lettuce with Caesar dressing",
+    "price": 8.99,
+    "category": "Salad",
+    "image": "🥗"
+  },
+  {
+    "id": "3",
+    "name": "Spaghetti Carbonara",
+    "description": "Traditional Italian pasta with egg and bacon",
+    "price": 14.99,
+    "category": "Pasta",
+    "image": "🍝"
+  },
+  {
+    "id": "4",
+    "name": "Grilled Salmon",
+    "description": "Fresh salmon fillet with vegetables",
+    "price": 18.99,
+    "category": "Main Course",
+    "image": "🐟"
+  },
+  {
+    "id": "5",
+    "name": "Chocolate Cake",
+    "description": "Rich chocolate cake with frosting",
+    "price": 6.99,
+    "category": "Dessert",
+    "image": "🍰"
+  }
+]

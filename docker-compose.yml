@@ -1,0 +1,63 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: menuapp-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: menuapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - menuapp-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d menuapp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: menuapp-backend
+    environment:
+      PORT: 3001
+      JWT_SECRET: your-secret-key-change-in-production
+      NODE_ENV: production
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: menuapp
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    ports:
+      - "3001:3001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - menuapp-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: menuapp-frontend
+    ports:
+      - "80:80"
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - menuapp-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  menuapp-network:
+    driver: bridge

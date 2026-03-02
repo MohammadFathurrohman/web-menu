@@ -1,0 +1,71 @@
+/* ── TEMA — 2 Warna: Neutral + Blue ───────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ── LIGHT MODE (default) ──────────────────────────────────────── */
+:root {
+  --font-heading : 'Inter', sans-serif;
+  --font-body    : 'Inter', sans-serif;
+
+  --c-page  : #f3f4f6;
+  --c-card  : #ffffff;
+  --c-input : #f9fafb;
+
+  --c-accent       : #2563eb;
+  --c-accent-light : #93c5fd;
+  --c-accent-dim   : rgba(37, 99, 235, 0.10);
+  --c-accent-border: rgba(37, 99, 235, 0.22);
+  --c-accent-glow  : rgba(37, 99, 235, 0.08);
+
+  --c-text      : #111827;
+  --c-text-muted: #6b7280;
+  --c-text-label: #4b5563;
+
+  --c-tooltip-bg    : #ffffff;
+  --c-tooltip-border: rgba(37, 99, 235, 0.25);
+  --c-tooltip-text  : #111827;
+
+  /* Order status colors */
+  --s-pending-bg   : rgba(245,158,11,0.12); --s-pending-text  : #b45309; --s-pending-border  : rgba(245,158,11,0.40);
+  --s-confirmed-bg : rgba(37,99,235,0.10);  --s-confirmed-text: #1d4ed8; --s-confirmed-border: rgba(37,99,235,0.35);
+  --s-preparing-bg : rgba(139,92,246,0.12); --s-preparing-text: #7c3aed; --s-preparing-border: rgba(139,92,246,0.40);
+  --s-ready-bg     : rgba(16,185,129,0.12); --s-ready-text    : #059669; --s-ready-border    : rgba(16,185,129,0.40);
+  --s-completed-bg : rgba(107,114,128,0.10);--s-completed-text: #4b5563; --s-completed-border: rgba(107,114,128,0.30);
+  --s-cancelled-bg : rgba(239,68,68,0.10);  --s-cancelled-text: #dc2626; --s-cancelled-border: rgba(239,68,68,0.30);
+
+  --c-pie-1: #2563eb;
+  --c-pie-2: #10b981;
+  --c-pie-3: #f59e0b;
+  --c-pie-4: #ef4444;
+  --c-pie-5: #8b5cf6;
+  --c-pie-6: #06b6d4;
+}
+
+/* ── DARK MODE ─────────────────────────────────────────────────── */
+.dark {
+  --c-page  : #111827;
+  --c-card  : #1f2937;
+  --c-input : #111827;
+
+  --c-accent       : #3b82f6;
+  --c-accent-light : #93c5fd;
+  --c-accent-dim   : rgba(59, 130, 246, 0.15);
+  --c-accent-border: rgba(59, 130, 246, 0.25);
+  --c-accent-glow  : rgba(59, 130, 246, 0.10);
+
+  --c-text      : #f9fafb;
+  --c-text-muted: #9ca3af;
+  --c-text-label: #d1d5db;
+
+  --c-tooltip-bg    : #1f2937;
+  --c-tooltip-border: rgba(59, 130, 246, 0.30);
+  --c-tooltip-text  : #f9fafb;
+
+  /* Order status colors — dark */
+  --s-pending-bg   : rgba(245,158,11,0.15); --s-pending-text  : #fbbf24; --s-pending-border  : rgba(245,158,11,0.40);
+  --s-confirmed-bg : rgba(59,130,246,0.15);  --s-confirmed-text: #93c5fd; --s-confirmed-border: rgba(59,130,246,0.40);
+  --s-preparing-bg : rgba(167,139,250,0.15); --s-preparing-text: #c4b5fd; --s-preparing-border: rgba(167,139,250,0.40);
+  --s-ready-bg     : rgba(52,211,153,0.15);  --s-ready-text    : #6ee7b7; --s-ready-border    : rgba(52,211,153,0.40);
+  --s-completed-bg : rgba(156,163,175,0.12); --s-completed-text: #9ca3af; --s-completed-border: rgba(156,163,175,0.30);
+  --s-cancelled-bg : rgba(252,165,165,0.12); --s-cancelled-text: #fca5a5; --s-cancelled-border: rgba(252,165,165,0.30);
+}

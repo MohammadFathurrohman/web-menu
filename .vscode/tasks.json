@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Frontend Dev Server",
+			"type": "shell",
+			"command": "cmd",
+			"args": ["/c", "cd frontend && npm run dev"],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Backend Server",
+			"type": "shell",
+			"command": "cmd",
+			"args": ["/c", "cd backend && node server.js"],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend",
+			"type": "shell",
+			"command": "cmd",
+			"args": ["/c", "cd frontend && npm run build"],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

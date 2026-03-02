@@ -1,0 +1,29 @@
+﻿@import './theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--c-page);
+  color: var(--c-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+}
+
+input, select, textarea {
+  color: var(--c-text);
+}
+
+/* Hide browser built-in password reveal button (Edge/Chrome) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none;
+}
