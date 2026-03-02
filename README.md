@@ -86,14 +86,6 @@ A modern, full-stack web application for managing a menu with user authenticatio
    npm run dev
    ```
    Runs on http://localhost:5173
-
-## Demo Credentials
-
-| Role  | Username | Password |
-|-------|----------|----------|
-| Admin | `admin`  | `admin123` |
-| User  | `user`   | `user123`  |
-
 ## API Endpoints
 
 ### Authentication
@@ -101,8 +93,6 @@ A modern, full-stack web application for managing a menu with user authenticatio
 - `POST /auth/login` — Login → `{ accessToken, refreshToken, user }`
 - `POST /auth/refresh` — Rotate refresh token
 - `POST /auth/logout` — Invalidate refresh token
-- `POST /auth/verify` — Verify access token
-- `GET /health` — Server + DB health check
 
 ### Menu
 - `GET /menu` — Paginated: `?page=&limit=&search=&category=`
